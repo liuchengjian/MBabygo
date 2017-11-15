@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_actor"
+            style="@style/ClubToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#f2ffffff"
+            app:layout_collapseMode="pin"
+            app:title="Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="定位"
+                    android:textColor="#333"
+                    android:textSize="34px" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ccc"></View>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabL_gdmap"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/text_yellow"
+            app:tabMode="scrollable"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ccc"></View>
+
+        <liu.chj.mbabygo.adapter.GDMapViewPager
+
+            android:id="@+id/viewpager_gdmap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.zhy.autolayout.AutoLinearLayout>
+    <ImageView
+        android:id="@+id/iv_gdmap_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/gdmap_location"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="30px"
+        />
+</com.zhy.autolayout.AutoRelativeLayout>

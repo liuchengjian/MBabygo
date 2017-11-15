@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgrund_color"
+    >
+    <LinearLayout
+        android:layout_above="@+id/rl_add_activity_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_activity_publish"
+            style="@style/ClubToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:title="Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--返回按钮-->
+                <TextView
+                    android:id="@+id/tv_activity_write_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="取消"
+                    android:textColor="#333"
+                    android:textSize="30px" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="活动发布"
+                    android:textColor="#333"
+                    android:textSize="34px" />
+
+                <ImageView
+                    android:id="@+id/activity_write_complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@mipmap/accomplish" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:id="@+id/view_activity_publish"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/toolbar_activity_publish"
+            android:background="#ccc"></View>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/write_comment_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/text_yellow"
+            app:tabSelectedTextColor="#333"
+            app:tabTextColor="#333333"></android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_write_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rl_add_activity_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:background="#ffffffff">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#ccc"></View>
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="122px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/chat_picture" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/chat_aa" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="122px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/chat_expression" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

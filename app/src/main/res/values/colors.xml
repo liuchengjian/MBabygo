@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="trans">#00000000</color>
+
+    <color name="main_yellow">#ffbf41</color>
+    <color name="text_yellow">#ffcd5b</color>
+    <color name="backgrund_color">#f2ffffff</color>
+    <color name="backgrund">#f5f5f5</color>
+
+    <color name="red_normal">#FF0000</color>
+    <color name="red_pressed">#FF6666</color>
+    <color name="purple_normal">#9932CC</color>
+    <color name="purple_pressed">#9F79EE</color>
+    <!--电池、时间、wifi图标为黑色字体时，状态栏为透明白色-->
+    <color name="status_bar">#00000000</color>
+    <color name="doyen_one_text">#ff6c00</color>
+    <!--活动发布字体颜色-->
+    <color name="Activity_publish_text_color">#909090</color>
+    <color name="text_blue_color">#007aff</color>
+</resources>

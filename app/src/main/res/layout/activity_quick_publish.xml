@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <!-- 让他获得焦点，实现进入界面不弹出键盘 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"></LinearLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_quick_publish"
+        style="@style/ClubToolbar"
+        android:background="@color/backgrund_color"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:title="Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--返回按钮-->
+            <TextView
+                android:id="@+id/iv_join_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:textColor="#333"
+                android:text="取消"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="快速发布"
+                android:textColor="#333"
+                android:textSize="34px" />
+            <ImageView
+                android:id="@+id/iv_quick_publish_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/mbt_publish"
+                android:scaleType="fitXY"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:id="@+id/view_quick"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc"
+        android:layout_below="@+id/toolbar_quick_publish"
+        ></View>
+
+
+    <ScrollView
+        android:layout_below="@+id/view_quick"
+        android:layout_above="@+id/rl_quick_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/et_quick_publish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="start"
+                android:hint="分享您的经验，见解..."
+                android:lines="5"
+                android:ellipsize="end"
+                android:background="@null"
+                android:textColor="#333"
+                android:textSize="28px"
+                android:textColorHint="#909090" />
+
+            <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+                android:id="@+id/snpl_moment_add_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:bga_snpl_deleteDrawable="@mipmap/picture_remove"
+                app:bga_snpl_deleteDrawableOverlapQuarter="false"
+                app:bga_snpl_editable="true"
+                app:bga_snpl_otherWhiteSpacing="10dp"
+                app:bga_snpl_itemCornerRadius="0dp"
+                app:bga_snpl_itemSpanCount="3"
+                app:bga_snpl_itemWhiteSpacing="6dp"
+                app:bga_snpl_itemWidth="0dp"
+                app:bga_snpl_maxItemCount="9"
+                app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_dark"
+                app:bga_snpl_plusDrawable="@mipmap/pictrue_add"
+                app:bga_snpl_plusEnable="true"
+                app:bga_snpl_sortable="true"
+                ></cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_quick_tab"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:background="@color/backgrund_color"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageView
+            android:id="@+id/iv_quick_publish_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chat_picture"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="122px"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chat_a"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chat_expression"
+            android:scaleType="fitXY"
+            android:layout_marginRight="122px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

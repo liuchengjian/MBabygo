@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_ask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30px"
+        >
+        <ImageView
+            android:id="@+id/iv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_ask"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="30px"
+            />
+        <TextView
+            android:id="@+id/tv_ask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这个活动只有重庆地区才有吗？"
+            android:textSize="28px"
+            android:textColor="#333"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="50px"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/ll_ask"
+        >
+        <ImageView
+            android:id="@+id/iv_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_answer"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            />
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="是啊！这个活动目前只在重庆地区开放，后期呢，我们会增加更多的地区！"
+            android:textSize="28px"
+            android:layout_marginTop="30px"
+            android:textColor="#333"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="50px"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_consult_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="29分钟之前"
+        android:layout_below="@+id/ll_answer"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="30px"
+        android:paddingBottom="30px"
+        />
+
+
+</RelativeLayout>

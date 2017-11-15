@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- 主菜单图标属性 -->
+    <dimen name="main_menu_paddingTop">5dp</dimen>
+    <dimen name="main_tab_menu_text_size">22px</dimen>
+    <dimen name="item_height">60dp</dimen>
+    <!-- 文本样式属性标题大小 -->
+    <dimen name="AaBigTitle">30px</dimen>
+    <dimen name="AaSubTitle">24px</dimen>
+    <dimen name="AaTextTitle">20px</dimen>
+    <!-- 发布按钮属性大小 -->
+    <dimen name="publish_big_size">172px</dimen>
+    <dimen name="publish_small_size">140px</dimen>
+    <dimen name="publish_radius">224px</dimen>
+    <dimen name="publish_big_margin_right">30px</dimen>
+    <dimen name="publish_big_margin_button">262px</dimen>
+    <dimen name="edit_padding_top">0dp</dimen>
+</resources>

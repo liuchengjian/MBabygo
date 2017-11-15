@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:padding="20px"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_enter_background"
+            android:layout_width="226px"
+            android:layout_height="300px"
+            android:src="@mipmap/yuanyuanma1"
+            android:scaleType="fitXY"/>
+            <ImageView
+                android:id="@+id/iv_enter_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="fitXY"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_marginLeft="20px"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_name_and_theme"
+                android:layout_marginTop="10px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="亲子微电影--《我们都在拍大片》记录您和您的孩子的影像"
+                android:textSize="34px"
+                android:textColor="#333"
+                />
+            <TextView
+                android:id="@+id/tv_enter_address"
+                android:layout_marginTop="20px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="乐坊文化传播工作室"
+                android:textSize="26px"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="#333"
+                />
+            <TextView
+                android:id="@+id/tv_enter_time"
+                android:layout_marginTop="20px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2016年11月6日-2017年10月10日"
+                android:textSize="24px"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="#333"
+                />
+            <TextView
+                android:id="@+id/tv_enter_title"
+                android:layout_marginTop="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我们在拍大片"
+                android:textSize="28px"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="#ffb400"
+                />
+            <TextView
+                android:id="@+id/tv_enter_activity_enter"
+                android:layout_marginTop="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="火热报名中"
+                android:textSize="28px"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="#ffb400"
+                />
+
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

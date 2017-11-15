@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        style="@style/ClubToolbar"
+        android:background="@color/backgrund_color"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:title="Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_apply_doyen_picture_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="照片"
+                android:textColor="#333"
+                android:textSize="34px" />
+            <TextView
+                android:id="@+id/tv_apply_doyen_picture_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确定"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#333"
+                android:layout_marginRight="30px"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/backgrund"
+        ></View>
+    <ImageView
+        android:id="@+id/apply_doyen_add_picture"
+        android:layout_width="400px"
+        android:layout_height="500px"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/apply_doyen_pic"
+        android:layout_marginTop="170px"
+        android:scaleType="fitXY"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="照片要求2M以上，清晰，环境清爽"
+        android:textColor="#333"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60px"
+        android:textSize="26px"
+        />
+</LinearLayout>

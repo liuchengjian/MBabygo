@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgrund"
+    android:layout_height="match_parent">
+    <!-- 让他获得焦点，实现进入界面不弹出键盘 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        android:orientation="vertical"></LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        style="@style/ClubToolbar"
+        android:background="@color/backgrund_color"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:title="Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_introduce_oneself_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="简介"
+                android:textColor="#333"
+                android:textSize="34px" />
+            <TextView
+                android:id="@+id/tv_introduce_oneself_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确定"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#333"
+                android:layout_marginRight="30px"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        android:background="@color/backgrund"
+        ></View>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="300px"
+
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:hint="请输入昵称！"
+        android:gravity="left|top"
+        android:paddingTop="20px"
+        android:background="@color/backgrund_color"
+        android:paddingRight="30px"
+        android:paddingLeft="30px"
+        android:textSize="32px"
+        android:textColor="#333"
+        android:id="@+id/et_introduce_oneself"
+        />
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/100"
+        android:textColor="#802c2525"
+        android:textSize="20px"
+        android:layout_marginBottom="20px"
+        android:layout_marginRight="30px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>
+</LinearLayout>

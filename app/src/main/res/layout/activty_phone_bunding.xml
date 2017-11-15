@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/backgrund_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            style="@style/ClubToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/backgrund_color"
+            app:layout_collapseMode="pin"
+
+            app:title="Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--返回按钮-->
+                <ImageView
+                    android:id="@+id/iv_phone_bunding_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="手机绑定"
+                    android:textColor="#333"
+                    android:textSize="34px" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30px"
+            android:background="@color/backgrund"></View>
+
+        <EditText
+            android:id="@+id/et_phone_bunding_phone"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@null"
+            android:hint="请输入手机号码"
+            android:lines="1"
+            android:textColor="#333"
+            android:textColorHint="#aaa"
+            android:textSize="30px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:background="#d8d8d8"></View>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_phone_bunding_code"
+                android:layout_width="0dp"
+                android:layout_height="100px"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:lines="1"
+                android:textColor="#333"
+                android:textColorHint="#aaa"
+                android:textSize="30px" />
+
+            <Button
+                android:id="@+id/bt_phone_bunding_identifying_code"
+                android:layout_width="wrap_content"
+                android:layout_height="76px"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/identifying_code_pre"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_phone_bunding_again"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="60秒后可重新发送验证码"
+        android:textColor="#666"
+        android:textSize="24px"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="123px"
+        android:layout_marginRight="123px"
+        android:gravity="center"
+        android:lines="3"
+        android:text="输入您的手机号后点击“获取验证码”,我们将以短信的方式将验证码发送给您.如果没有收到含有验证码的短信,请点击重新获取."
+        android:textColor="#aaa"
+        android:textSize="24px" />
+
+    <Button
+        android:id="@+id/bt_phone_bunding_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="@mipmap/revise_password_sure"
+        android:scaleType="fitXY" />
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgrund_color"
+    >
+
+    <LinearLayout
+        android:layout_above="@+id/rl_add_activity_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_actor"
+            style="@style/ClubToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            android:background="#f2ffffff"
+            app:title="Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--返回按钮-->
+                <ImageView
+                    android:id="@+id/iv_activity_my_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="我的活动"
+                    android:textColor="#333"
+                    android:textSize="34px" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:id="@+id/view_activity_publish"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/toolbar_activity_publish"
+            android:background="#ccc"></View>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/activity_my_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/text_yellow"
+            app:tabSelectedTextColor="#333"
+            app:tabTextColor="#333333"></android.support.design.widget.TabLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="#f5f5f5"></View>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_activity_my"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_hot_or_time"
+        android:layout_width="300px"
+        android:layout_height="80px"
+        android:gravity="center_vertical"
+        android:text="按热度"
+        android:textColor="#333"
+        android:paddingLeft="30px"
+        android:textSize="36px"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

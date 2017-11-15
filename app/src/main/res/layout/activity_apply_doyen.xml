@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_activity_publish"
+        style="@style/ClubToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backgrund_color"
+        app:layout_collapseMode="pin"
+        app:title="Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_apply_doyen_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/icon_back" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="申请达人"
+                android:textColor="#333"
+                android:textSize="34px" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/view__apply_doyen_publish"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgrund_color"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:background="#f5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:text="基本资料"
+                android:textColor="#aaa"
+                android:textSize="22px" />
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="姓名"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_doyen_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_nicheng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="昵称"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_doyen_nicheng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="性别"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_doyen_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="手机"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_doyen_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="照片"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <ImageView
+                        android:id="@+id/iv_apply_doyen_picture"
+                        android:layout_width="400px"
+                        android:layout_height="500px"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginLeft="153px"
+                        android:layout_marginTop="36px"
+                        android:visibility="gone"
+                        android:src="@mipmap/yuanyuanma1" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:background="#f5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:text="其他资料"
+                android:textColor="#aaa"
+                android:textSize="22px" />
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_wechat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="微信账号"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_doyen_wechat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="联系地址"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_doyen_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_apply_doyen_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="达人分类"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_doyen_classify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="达人简介"
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="微信账号"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#d8d8d8"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36px"
+                        android:layout_marginTop="36px"
+                        android:text="达人文章"
+
+                        android:textColor="#666"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="153px"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="微信账号"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/icon_my_normal" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#f5f5f5"
+                android:layout_height="190px">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70px"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="125px"
+                    android:layout_marginLeft="125px"
+                    android:src="@mipmap/submit_apply" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_actor"
+        style="@style/ClubToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#f2ffffff"
+        app:layout_collapseMode="pin"
+        app:title="Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="社区"
+                android:textColor="#333"
+                android:textSize="34px" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc"></View>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.allure.lbanners.LMBanners
+                android:id="@+id/topic_banners"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:auto_play="true"
+                app:canLoop="true"
+                app:durtion="5000"
+                app:horizontal_transitionEffect="accordion"
+                app:indicator_position="bottom_mid"
+                app:indicator_select="@drawable/page_indicator_select"
+                app:indicator_unselect="@drawable/page_indicator_unselect"
+                app:indicator_width="5"
+                app:isVertical="false"
+                app:scroll_duration="66666"></com.allure.lbanners.LMBanners>
+
+            <liu.chj.mbabygo.activity.MyListView
+                android:id="@+id/topic_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </liu.chj.mbabygo.activity.MyListView>
+        </LinearLayout>
+    </ScrollView>
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
+
+</LinearLayout>

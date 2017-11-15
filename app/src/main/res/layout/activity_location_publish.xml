@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 让他获得焦点，实现进入界面不弹出键盘 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"></LinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_gdmap_tab"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            style="@style/ClubToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:title="Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--返回按钮-->
+                <TextView
+                    android:id="@+id/tv_location_publish_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="取消" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="定位发布"
+                    android:textColor="#333"
+                    android:textSize="34px" />
+
+                <ImageView
+                    android:id="@+id/iv_location_publish_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/mbt_publish" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ccc"></View>
+
+        <ScrollView
+            android:id="@+id/sv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/ll_gdmap_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30px"
+                        android:text="标签"
+                        android:textColor="#333"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:id="@+id/tv_gdmap_iocn_show"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30px"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:id="@+id/tv_gdmap_iocn_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="20px"
+                        android:text="定位标签"
+                        android:textColor="#909090"
+                        android:textSize="28px" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="30px"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_my_normal" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:background="#ccc"></View>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30px"
+                        android:text="我在"
+                        android:textColor="#333"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30px"
+                        android:layout_weight="1"
+                        android:text="重庆 观音桥"
+                        android:textColor="#333"
+                        android:textSize="28px" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="30px"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_my_normal" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:background="#ccc"></View>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:layout_marginLeft="30px"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@drawable/gdmap_indoor"
+                        android:paddingRight="258px"
+                        android:text="室内"
+                        android:textColor="#333"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableRight="@drawable/gdmap_outdoor"
+                        android:paddingRight="258px"
+                        android:text="室外"
+                        android:textColor="#333"
+                        android:textSize="14dp" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:background="#ccc"></View>
+
+                <EditText
+                    android:id="@+id/et_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30px"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="发布定位动态"
+                    android:textColor="#333"
+                    android:textColorHint="#909090"
+                    android:textSize="28px" />
+                <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+                    android:id="@+id/snpl_location_add_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:bga_snpl_deleteDrawable="@mipmap/picture_remove"
+                    app:bga_snpl_deleteDrawableOverlapQuarter="false"
+                    app:bga_snpl_editable="true"
+                    app:bga_snpl_otherWhiteSpacing="10dp"
+                    app:bga_snpl_itemCornerRadius="0dp"
+                    app:bga_snpl_itemSpanCount="3"
+                    app:bga_snpl_itemWhiteSpacing="6dp"
+                    app:bga_snpl_itemWidth="0dp"
+                    app:bga_snpl_maxItemCount="9"
+                    app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_dark"
+                    app:bga_snpl_plusDrawable="@mipmap/pictrue_add"
+                    app:bga_snpl_plusEnable="true"
+                    app:bga_snpl_sortable="true"
+                    ></cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </ScrollView>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/ll_gdmap_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90px"
+            android:layout_marginLeft="30px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_xing2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20px"
+                android:text="小贴士：不要定位自己的私人住宅信息哦。"
+                android:textColor="#333"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ccc"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="98px">
+
+            <ImageView
+                android:id="@+id/iv_location_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="196px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/chat_picture" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="196px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/tab_biaoqing2" />
+        </RelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

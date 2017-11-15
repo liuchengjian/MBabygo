@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2ffffff">
+    <!-- 让他获得焦点，实现进入界面不弹出键盘 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"></LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_join_activity"
+        style="@style/ClubToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:title="Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_join_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="填写参加信息"
+                android:textColor="#333"
+                android:textSize="34px" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/sv_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/toolbar_join_activity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/backgrund"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="30px"
+                android:text="联系人信息"
+                android:textColor="#333"
+                android:textSize="30px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#ccc"></View>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="98px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180px"
+                    android:layout_height="wrap_content"
+                    android:padding="30px"
+                    android:text="联系人"
+                    android:textColor="#333"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:layout_width="20px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="*"
+                    android:textColor="#ff3c00"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="必填,姓名"
+                    android:textColor="#aaa"
+                    android:textCursorDrawable="@drawable/editcursor"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#ccc"></View>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="98px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="180px"
+                    android:layout_height="wrap_content"
+                    android:padding="30px"
+                    android:text="手机号码"
+                    android:textColor="#333"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:layout_width="20px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="*"
+                    android:textColor="#ff3c00"
+                    android:textSize="30px" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="必填,用于接收短信"
+                    android:textCursorDrawable="@drawable/editcursor"
+                    android:textColor="#aaa"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/backgrund"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="98px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="30px"
+                    android:text="参与人信息"
+                    android:textColor="#333"
+                    android:textSize="30px" />
+
+                <LinearLayout
+                    android:id="@+id/ll_add_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/tianjia2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10px"
+                        android:gravity="center"
+                        android:text="添加联系人"
+                        android:textColor="#1c98df"
+                        android:textSize="24px" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#ccc"></View>
+            <liu.chj.mbabygo.activity.MyListView
+                android:id="@+id/lv_contacts_message"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30px"
+                android:divider="#ccc"
+                android:dividerHeight="2px"
+                android:layout_height="wrap_content">
+
+            </liu.chj.mbabygo.activity.MyListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/backgrund"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="30px"
+                android:text="其他信息"
+                android:textColor="#333"
+                android:textSize="30px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#ccc"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="170px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:text="总额"
+                    android:textColor="@color/main_yellow"
+                    android:textSize="30px" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="33px"
+                        android:background="@null"
+                        android:text="￥758"
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6px"
+                        android:background="@null"
+                        android:text="成人￥588x1/儿童￥170x1"
+                        android:textColor="#aaa"
+                        android:textSize="20px" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:layout_marginBottom="30px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="170px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:text="日期"
+
+                    android:textColor="@color/main_yellow"
+                    android:textSize="30px" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="2017年3月"
+                    android:textColor="#333"
+                    android:textSize="30px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgrund"
+                android:orientation="vertical"
+                android:paddingLeft="30px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    android:gravity="center"
+                    android:text="参与限制"
+                    android:textColor="#333"
+                    android:textSize="30px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24px"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="10px"
+                        android:src="@mipmap/icon_xing2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="30px"
+                        android:text="本活动是亲子活动，需要至少一名家长全程陪同。" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15px"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_marginTop="10px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_xing2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="30px"
+                        android:text="儿童限制年龄6-12岁，低于和高于此年龄段的儿童不接受报名，敬请谅解！" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pay_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/joinactivity"
+                    android:gravity="center"
+                    android:paddingBottom="23px"
+                    android:paddingLeft="139px"
+                    android:paddingRight="139px"
+                    android:paddingTop="23px"
+                    android:text="去支付"
+                    android:layout_marginTop="50px"
+                    android:layout_marginBottom="100px"
+                    android:textColor="#333"
+                    android:textSize="36px" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

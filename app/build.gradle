@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '24.0.3'
+    defaultConfig {
+        applicationId "liu.chj.mbabygo"
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+    repositories{
+        flatDir{
+            dirs 'libs' //就是你放aar的目录地址
+        }
+    }
+        repositories {
+            maven { url 'https://jitpack.io' }
+        }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/xutils-3.3.2.jar')
+    //导播图
+    compile 'com.allure0:LMBanners:1.0.4'
+    //图片加载
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.dinuscxj:recyclerrefreshlayout:1.0.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //适配
+    compile 'com.zhy:autolayout:1.4.5'
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'
+    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.3'
+    //社区浮框按钮
+    compile 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+    //活动icon
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    //时间选择器、地址选择器、单选选择器
+    compile 'com.airsaid.library:pickerviewlibrary:1.0.0'
+    //share短信验证码
+    compile files('libs/MobCommons-2016.1201.1839.jar')
+    //其他依赖
+    compile name: 'SMSSDK-2.1.3', ext: 'aar'
+    compile name: 'SMSSDKGUI-2.1.3', ext: 'aar'
+    //消息红点依赖
+    compile 'com.github.chendongde310:SuperBadge:0.2.2'
+    //九宫图图片(与下面的九宫图不兼容)
+    //    compile 'com.lzy.widget:ninegridview:0.2.0'
+    //高德地图依赖
+    compile files('libs/AMap3DMap_4.1.3_AMapNavi_1.9.4_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar')
+    //九宫图发布依赖
+    compile 'cn.bingoogolapple:bga-adapter:1.1.5@aar'
+    compile 'cn.bingoogolapple:bga-photopicker:1.2.3@aar'
+    compile 'pub.devrel:easypermissions:0.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.romandanylyk:pageindicatorview:0.0.9'
+    //文本解析器
+    compile 'com.zzhoujay.richtext:richtext:2.3.7'
+    compile 'com.zzhoujay.glideimagegetter:glideimagegetter:1.0.1'
+    compile files('libs/SocialSDK_QQ_Full.jar')
+}

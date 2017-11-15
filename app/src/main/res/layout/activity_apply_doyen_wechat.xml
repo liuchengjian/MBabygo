@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/ClubToolbar"
+        android:background="@color/backgrund_color"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:title="Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--返回按钮-->
+            <ImageView
+                android:id="@+id/iv_apply_doyen_wechat_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="微信"
+                android:textColor="#333"
+                android:textSize="34px" />
+            <TextView
+                android:id="@+id/tv_apply_doyen_wechat_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确定"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#333"
+                android:layout_marginRight="30px"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        android:background="@color/backgrund"
+        ></View>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:hint="请填写微信号"
+        android:background="@color/backgrund_color"
+        android:paddingRight="30px"
+        android:paddingLeft="30px"
+        android:textSize="32px"
+        android:lines="1"
+        android:textColor="#333"
+        android:id="@+id/et_apply_doyen_wechat"
+        />
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgrund_color"
+    android:orientation="vertical">
+    <!-- 让他获得焦点，实现进入界面不弹出键盘 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"></LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/comment_toolbar"
+        style="@style/ClubToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        android:minHeight="?attr/actionBarSize"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_comment_back"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px">
+
+                <ImageView
+                    android:id="@+id/comment_back"
+                    android:layout_width="18px"
+                    android:layout_height="32px"
+                    android:layout_centerVertical="true"
+
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_back" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/comment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="评论(1212)"
+                android:textColor="#333333"
+                android:textSize="34px"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_hot_or_time"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_below="@+id/comment_toolbar"
+        android:background="#eee">
+
+        <LinearLayout
+            android:id="@+id/ll_classification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10px"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/icon_hot_or_time" />
+
+            <TextView
+                android:id="@+id/tv_hot_or_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="按热度"
+                android:gravity="center"
+                android:textColor="#1c98df"
+                android:textSize="24px" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_tab_comment"
+        android:layout_below="@+id/rl_hot_or_time"></ListView>
+
+    <RelativeLayout
+
+        android:id="@+id/rl_tab_comment"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/backgrund_color">
+
+        <EditText
+            android:id="@+id/et_tab_comment"
+            android:layout_width="530px"
+            android:layout_height="60px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/corneredit"
+            android:hint="萨达的少年"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:textColor="#333"
+            android:textColorHint="#aaa"
+            android:textSize="22px" />
+
+        <ImageView
+            android:id="@+id/iv_biaoqing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/tab_biaoqing2" />
+
+        <ImageView
+            android:id="@+id/tab_comment_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40px"
+            android:layout_toLeftOf="@+id/iv_biaoqing"
+            android:scaleType="fitXY"
+            android:src="@mipmap/tab_a" />
+    </RelativeLayout>
+</RelativeLayout>

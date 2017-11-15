@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="40px"
+    android:paddingLeft="30px"
+    android:paddingRight="30px"
+    android:layout_height="wrap_content" >
+
+    <liu.chj.mbabygo.editandimage.DataImageView
+
+        android:id="@+id/edit_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/image_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/picture_remove" />
+
+</RelativeLayout>
